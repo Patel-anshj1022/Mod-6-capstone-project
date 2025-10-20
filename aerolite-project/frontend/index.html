@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerolite - Premium Aircraft Marketplace</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- For different image formats (recommended) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <!-- For modern browsers -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#1e40af">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+    <img src="favicon.ico" alt="Aerolite" class="nav-logo-image">
+    <span>Aerolite</span>
+</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#products">Aircraft</a>
+                <a href="#values">Why Choose Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-auth" id="loginBtn">Login</button>
+                <button class="btn-auth btn-primary" id="registerBtn">Register</button>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Elevate Your Fleet</h1>
+            <p>Discover the world's finest aircraft with Aerolite - where innovation meets the sky</p>
+            <button class="btn-hero" onclick="scrollToProducts()">Explore Aircraft</button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- About Us Mini Section -->
+    <section class="about-mini">
+        <div class="container">
+            <div class="about-mini-content">
+                <div class="about-mini-text">
+                    <h2>Where Dreams Take Flight</h2>
+                    <p>Aerolite is the world's premier digital marketplace for premium aircraft. We connect visionaries with their perfect aircraft, delivering unparalleled service from selection to delivery.</p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <div class="stat-number" data-count="500">0</div>
+                            <div class="stat-label">Aircraft Delivered</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-number" data-count="75">0</div>
+                            <div class="stat-label">Countries Served</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-number" data-count="99">0</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-mini-visual">
+                    <div class="visual-card">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Global Reach</h4>
+                        <p>Connecting buyers and sellers worldwide</p>
+                    </div>
+                    <div class="visual-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Verified Quality</h4>
+                        <p>150-point inspection on every aircraft</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Featured Aircraft</h2>
+            <div class="filters">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Business">Business</option>
+                </select>
+                <input type="text" id="searchInput" placeholder="Search aircraft...">
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision-section">
+        <div class="container">
+            <div class="mv-grid">
+                <div class="mv-card mission-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To revolutionize aircraft commerce by providing an unparalleled digital experience, making premium aviation accessible to visionaries worldwide through innovative technology and trusted partnerships.</p>
+                </div>
+                <div class="mv-card vision-card">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>A world where every dream of flight finds its perfect vessel, connecting humanity through the limitless possibilities of aviation and transforming how the world acquires premium aircraft.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Aerolite</h2>
+                <p>Experience the difference with our commitment to excellence</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h4>Verified Aircraft</h4>
+                    <p>Every aircraft undergoes rigorous 150-point inspection and certification by aviation experts.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>24/7 Support</h4>
+                    <p>Round-the-clock expert assistance for all your aviation needs, anywhere in the world.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h4>Flexible Financing</h4>
+                    <p>Tailored financial solutions and partnerships for acquisitions of any scale.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>Secure Transactions</h4>
+                    <p>Bank-level security and escrow services ensuring your investment is always protected.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4>Global Logistics</h4>
+                    <p>Seamless worldwide delivery and registration assistance across all jurisdictions.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4>Expert Consultation</h4>
+                    <p>Access to industry experts for technical, regulatory, and operational guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section-home">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Take Flight?</h2>
+                <p>Join thousands of satisfied clients who've found their perfect aircraft with Aerolite. Your journey to aircraft ownership starts here.</p>
+                <div class="cta-buttons">
+                    <button class="btn-cta-primary" onclick="scrollToProducts()">
+                        Browse Aircraft
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-cta-secondary" onclick="showAuthModal('register')">
+                        Create Account
+                        <i class="fas fa-user-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auth Modals -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="register">Register</button>
+            </div>
+            
+            <form id="loginForm" class="auth-form active">
+                <h3>Welcome Back</h3>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+            
+            <form id="registerForm" class="auth-form">
+                <h3>Join Aerolite</h3>
+                <div class="name-fields">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn-primary">Create Account</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content cart-content">
+            <span class="close">&times;</span>
+            <h3>Your Hangar</h3>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-total">
+                <strong>Total: $<span id="cartTotal">0</span></strong>
+                <button class="btn-primary" id="checkoutBtn">Proceed to Delivery</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content checkout-content">
+            <span class="close">&times;</span>
+            <h3><i class="fas fa-shipping-fast"></i> Delivery Information</h3>
+            <form id="checkoutForm" class="checkout-form">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> Full Name</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-map-marker-alt"></i> Delivery Address</label>
+                    <textarea placeholder="Specify airport or hangar location for delivery" required></textarea>
+                </div>
+                <div class="checkout-summary">
+                    <h4><i class="fas fa-receipt"></i> Order Summary</h4>
+                    <div id="checkoutSummary"></div>
+                </div>
+                <button type="submit" class="btn-checkout">
+                    <i class="fas fa-lock"></i>
+                    Proceed to Payment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content payment-content">
+            <span class="close">&times;</span>
+            <h3><i class="fas fa-credit-card"></i> Complete Your Purchase</h3>
+            
+            <div class="payment-summary">
+                <h4><i class="fas fa-receipt"></i> Order Summary</h4>
+                <div id="paymentSummary"></div>
+                <div class="payment-total">
+                    <strong>Amount Due: $<span id="paymentTotal">0</span></strong>
+                </div>
+            </div>
+
+            <form id="paymentForm">
+                <div class="payment-section">
+                    <h4><i class="fas fa-wallet"></i> Payment Method</h4>
+                    <select required>
+                        <option value="">Select Payment Method</option>
+                        <option value="credit_card">Credit Card</option>
+                        <option value="debit_card">Debit Card</option>
+                        <option value="bank_transfer">Bank Transfer</option>
+                    </select>
+                </div>
+
+                <div class="payment-section">
+                    <h4><i class="fas fa-credit-card"></i> Card Details</h4>
+                    <input type="text" placeholder="Card Number (e.g., 4242 4242 4242 4242)" 
+                           pattern="[0-9\s]{13,19}" maxlength="19" required>
+                    <div class="card-details">
+                        <input type="text" placeholder="MM/YY" pattern="\d{2}/\d{2}" required>
+                        <input type="text" placeholder="CVC" pattern="\d{3}" maxlength="3" required>
+                    </div>
+                    <input type="text" placeholder="Cardholder Name" required>
+                </div>
+
+                <div class="payment-security">
+                    <i class="fas fa-lock"></i>
+                    <span>Your payment is secure and encrypted</span>
+                </div>
+
+                <button type="submit" class="btn-payment">
+                    <i class="fas fa-lock"></i>
+                    Complete Payment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions about our aircraft or services? We're here to help you soar.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-AERO</p>
+                            <span>Available 24/7 for urgent inquiries</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p>support@aerolite.com</p>
+                            <span>We'll respond within 2 hours</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Visit Us</h4>
+                            <p>123 Aviation Way</p>
+                            <span>Skyline Plaza, Floor 15</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 6:00 AM - 10:00 PM</p>
+                            <span>Weekends: 8:00 AM - 8:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h3>Send Us a Message</h3>
+                        <p>Fill out the form below and our aviation experts will assist you promptly.</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">
+                                    <i class="fas fa-user"></i>
+                                    First Name
+                                </label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">
+                                    <i class="fas fa-user"></i>
+                                    Last Name
+                                </label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i>
+                                Email Address
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="fas fa-phone"></i>
+                                Phone Number
+                            </label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">
+                                <i class="fas fa-tag"></i>
+                                Subject
+                            </label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select inquiry type</option>
+                                <option value="aircraft-purchase">Aircraft Purchase</option>
+                                <option value="financing">Financing Options</option>
+                                <option value="maintenance">Maintenance Services</option>
+                                <option value="partnership">Partnership Opportunities</option>
+                                <option value="technical-support">Technical Support</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">
+                                <i class="fas fa-dollar-sign"></i>
+                                Budget Range (Optional)
+                            </label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-10m">Under $10M</option>
+                                <option value="10m-50m">$10M - $50M</option>
+                                <option value="50m-100m">$50M - $100M</option>
+                                <option value="100m-500m">$100M - $500M</option>
+                                <option value="over-500m">Over $500M</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-comment"></i>
+                                Your Message
+                            </label>
+                            <textarea id="message" name="message" placeholder="Tell us about your aviation needs, specific aircraft interests, or any questions you have..." rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" checked>
+                                <span class="checkmark"></span>
+                                Subscribe to our aviation insights newsletter
+                            </label>
+                            
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="urgent" id="urgentCheckbox">
+                                <span class="checkmark urgent"></span>
+                                This is an urgent inquiry
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-contact">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Success Modal -->
+    <div id="contactSuccessModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for contacting Aerolite. Our aviation experts will get back to you within 2 hours.</p>
+            <button class="btn-success" onclick="closeSuccessModal()">
+                <i class="fas fa-thumbs-up"></i>
+                Got It!
+            </button>
+        </div>
+    </div>
+</body>
+</html>
