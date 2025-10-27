@@ -48,7 +48,7 @@ A full-stack e-commerce platform for buying and selling premium aircraft. Built 
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/aerolite.git
+git clone https://github.com/Patel-anshj1022/Mod-6-capstone-project
 cd aerolite
 ```
 
