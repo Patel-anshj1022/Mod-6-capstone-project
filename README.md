@@ -24,6 +24,7 @@ A full-stack e-commerce platform for buying and selling premium aircraft. Built 
 - **RESTful API** - Clean API design for all operations
 - **JWT-like Authentication** - Secure token-based auth system
 
+<<<<<<< HEAD
 ## 📸 Screenshots
 
 ### Homepage
@@ -38,6 +39,8 @@ A full-stack e-commerce platform for buying and selling premium aircraft. Built 
 ### User Authentication
 ![Login Modal](./screenshots/login.png)
 
+=======
+>>>>>>> d8f9c341f1bc6245d1c1d489200e604dca08fc1a
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -163,4 +166,8 @@ echo "python-3.10.0" > runtime.txt
 ## 📞 Support
 - If you have any questions or run into issues, please open an issue on GitHub or contact the development team.
 
+<<<<<<< HEAD
 ### Ready to elevate your fleet? Visit Aerolite today!
+=======
+### Ready to elevate your fleet? Visit Aerolite today!
+>>>>>>> d8f9c341f1bc6245d1c1d489200e604dca08fc1a
