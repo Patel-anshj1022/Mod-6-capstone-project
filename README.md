@@ -24,7 +24,7 @@ A full-stack e-commerce platform for buying and selling premium aircraft. Built 
 - **RESTful API** - Clean API design for all operations
 - **JWT-like Authentication** - Secure token-based auth system
 
-<<<<<<< HEAD
+
 ## 📸 Screenshots
 
 ### Homepage
@@ -39,8 +39,7 @@ A full-stack e-commerce platform for buying and selling premium aircraft. Built 
 ### User Authentication
 ![Login Modal](./screenshots/login.png)
 
-=======
->>>>>>> d8f9c341f1bc6245d1c1d489200e604dca08fc1a
+
 ## 🚀 Quick Start
 
 ### Prerequisites
