@@ -27,16 +27,16 @@ A full-stack e-commerce platform for buying and selling premium aircraft. Built 
 ## 📸 Screenshots
 
 ### Homepage
-![Homepage](.aerolite-project/screenshots/homepage.png)
+![Homepage](./screenshots/homepage.png)
 
 ### Aircraft Catalog
-![Aircraft Catalog](.aerolite-project/screenshots/catalog.png)
+![Aircraft Catalog](./screenshots/catalog.png)
 
 ### Shopping Cart
-![Shopping Cart](.aerolite-project/screenshots/cart.png)
+![Shopping Cart](./screenshots/cart.png)
 
 ### User Authentication
-![Login Modal](.aerolite-project/screenshots/login.png)
+![Login Modal](./screenshots/login.png)
 
 ## 🚀 Quick Start
 
